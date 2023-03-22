@@ -17,7 +17,7 @@ const App = () => {
   const handleClick = ()=>{
         if(data.length>0){
           setTask([...task,data]);
-          setData(" ");
+          setData([]);
            setError(false);
         }
         else{setError(true);}
@@ -27,6 +27,9 @@ const App = () => {
              const newtask = [...task];
              newtask.splice(index,1);
              setTask(newtask);
+            
+         console.log("delete",task);
+            
   }
   return (
     <div>
